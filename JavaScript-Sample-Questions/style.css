@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Nunito+Sans:opsz@6..12&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: #07141d;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.accordion {
+    margin: 4rem auto;
+    width: min(60rem, 60%);
+}
+
+.accordion > li {
+    list-style-type: none;
+    width: 100%;
+    margin-bottom: 4rem;
+    background-color: rgb(227, 227, 227);
+    padding: 1rem;
+    border-radius: 0.4rem;
+}
+
+.accordion li label {
+    padding: 1rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    font-size: 2.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: #3241a1;
+    gap: 4rem;
+}
+
+.accordion label span {
+    transition: all 0.5s;
+}
+
+.accordion input {
+    display: none;
+}
+
+.accordion .answer {
+    padding: 0 1rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.accordion .answer > ul {
+    margin-left: 3rem;
+    list-style-type: disc;
+    font-size: 2rem;
+    font-family: 'Nunito Sans', sans-serif;
+    padding: 1rem;
+    color: #4b4a4a;
+    font-weight: bolder;
+}
+
+.accordion input:checked ~ .answer {
+    max-height: 40rem;
+}
+
+.accordion input:checked ~ label span {
+    transform: rotate(180deg);
+}
